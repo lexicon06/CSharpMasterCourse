@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Foxhound\\source\\repos\\VariablesTC\\VariablesApp\\VariablesApp.csproj",
-      "projectName": "VariablesApp",
-      "projectPath": "C:\\Users\\Foxhound\\source\\repos\\VariablesTC\\VariablesApp\\VariablesApp.csproj",
+      "projectUniqueName": "C:\\Users\\Foxhound\\source\\repos\\VariablesTC\\VariablesApp\\StringVariables.csproj",
+      "projectName": "StringVariables",
+      "projectPath": "C:\\Users\\Foxhound\\source\\repos\\VariablesTC\\VariablesApp\\StringVariables.csproj",
       "packagesPath": "C:\\Users\\Foxhound\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Foxhound\\source\\repos\\VariablesTC\\VariablesApp\\obj\\",
       "projectStyle": "PackageReference",
