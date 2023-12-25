@@ -12,3 +12,4 @@ C:\Users\Foxhound\source\repos\VariablesTC\VariablesApp\obj\Debug\net8.0\refint\
 C:\Users\Foxhound\source\repos\VariablesTC\VariablesApp\obj\Debug\net8.0\VariablesApp.pdb
 C:\Users\Foxhound\source\repos\VariablesTC\VariablesApp\obj\Debug\net8.0\VariablesApp.genruntimeconfig.cache
 C:\Users\Foxhound\source\repos\VariablesTC\VariablesApp\obj\Debug\net8.0\ref\VariablesApp.dll
+C:\Users\Foxhound\source\repos\VariablesTC\VariablesApp\obj\Debug\net8.0\VariablesApp.sourcelink.json
