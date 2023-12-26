@@ -1,0 +1,5 @@
+ Homework Variables
+
+Create console app that has variables to hold, person
+
+name, age, if alive, phone number

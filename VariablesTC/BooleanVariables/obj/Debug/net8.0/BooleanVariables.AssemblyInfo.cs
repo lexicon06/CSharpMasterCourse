@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BooleanVariables")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b97ba0a48959dbbe07407d05e7f9d29c344007c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("BooleanVariables")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BooleanVariables")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
