@@ -5,7 +5,11 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringVariables", "VariablesApp\StringVariables.csproj", "{03AB022D-58E6-4F43-ABE3-4A02D11F2F33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntVariables", "IntVariables\IntVariables.csproj", "{EFE2644F-C59B-4DEA-83F3-441D6D252631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntVariables", "IntVariables\IntVariables.csproj", "{EFE2644F-C59B-4DEA-83F3-441D6D252631}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleVariables", "DoubleVariables\DoubleVariables.csproj", "{95CF8A01-422D-490A-B161-B94D0399AFBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalVariables", "DecimalVariables\DecimalVariables.csproj", "{96E1FB4F-AECF-4D7C-B601-35C92F8163B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{EFE2644F-C59B-4DEA-83F3-441D6D252631}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFE2644F-C59B-4DEA-83F3-441D6D252631}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFE2644F-C59B-4DEA-83F3-441D6D252631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95CF8A01-422D-490A-B161-B94D0399AFBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95CF8A01-422D-490A-B161-B94D0399AFBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95CF8A01-422D-490A-B161-B94D0399AFBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95CF8A01-422D-490A-B161-B94D0399AFBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E1FB4F-AECF-4D7C-B601-35C92F8163B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E1FB4F-AECF-4D7C-B601-35C92F8163B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E1FB4F-AECF-4D7C-B601-35C92F8163B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E1FB4F-AECF-4D7C-B601-35C92F8163B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
