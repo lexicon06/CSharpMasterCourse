@@ -1,43 +1,39 @@
 ﻿
 
-Console.WriteLine("------------------------------------");
-Console.WriteLine("Assignament task for C# MasterCourse");
-Console.WriteLine("------------------------------------");
-
-string assignamentTask = File.ReadAllText($@"C:\Users\Foxhound\source\repos\VariablesTC\TP\Homework Variables.txt");
-
-
-Console.WriteLine(assignamentTask);
-
 
 string? personName;
-int? personAge;
-bool? personIsAlive;
+int personAge;
+bool personIsAlive;
 string personPhoneNumber;
 char valueYesNo = 'y';
 
+Console.WriteLine("Assignament task for C# MasterCourse");
+Console.WriteLine("------------------------------------");
 
 Console.WriteLine("Person ID:");
-Console.WriteLine("Please Enter your name");
+Console.WriteLine("Please enter your name:");
 personName = Console.ReadLine();
-Console.WriteLine("Please Enter your age");
-personAge = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Please enter your age:");
+while (!int.TryParse(Console.ReadLine(), out personAge))
+{
+    Console.WriteLine("Invalid input. Please enter a valid age:");
+}
+
 Console.WriteLine("Please enter your phone number:");
 personPhoneNumber = Console.ReadLine();
-Console.WriteLine("Alive? Y/N");
-valueYesNo = Convert.ToChar(Console.ReadLine());
-personIsAlive = valueYesNo.ToString().ToLower() == "y";
 
-
+Console.WriteLine("Alive? Y/N:");
+while (!char.TryParse(Console.ReadLine(), out valueYesNo) || (valueYesNo != 'y' && valueYesNo != 'n'))
+{
+    Console.WriteLine("Invalid input. Please enter 'Y' or 'N':");
+}
+personIsAlive = valueYesNo == 'y';
 
 Console.WriteLine("\nData is complete\n");
 
-Console.WriteLine($"----[{(personIsAlive == true ? "ALIVE" : "DEAD")}]----");
-
+Console.WriteLine($"----[{(personIsAlive ? "ALIVE" : "DEAD")}]----");
 Console.WriteLine("Person ID:");
 Console.WriteLine($"Name: {personName}");
 Console.WriteLine($"Age: {personAge}");
 Console.WriteLine($"PhoneNumber: {personPhoneNumber}");
-
-
-Console.WriteLine("");
