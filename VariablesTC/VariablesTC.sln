@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecimalVariables", "Decimal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooleanVariables", "BooleanVariables\BooleanVariables.csproj", "{01248923-187A-4489-A94E-5FEC9F059723}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullVariables", "NullVariables\NullVariables.csproj", "{7F338EF3-9FC1-4D68-BB33-1E4732977CAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullVariables", "NullVariables\NullVariables.csproj", "{7F338EF3-9FC1-4D68-BB33-1E4732977CAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP", "TP\TP.csproj", "{7EAE58E2-0CC3-4154-93A8-543A1AB61025}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TP", "TP\TP.csproj", "{7EAE58E2-0CC3-4154-93A8-543A1AB61025}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeVariables", "DateTimeVariables\DateTimeVariables.csproj", "{C31DA248-9E28-4756-8035-CD2459C6C1C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{7EAE58E2-0CC3-4154-93A8-543A1AB61025}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EAE58E2-0CC3-4154-93A8-543A1AB61025}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EAE58E2-0CC3-4154-93A8-543A1AB61025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C31DA248-9E28-4756-8035-CD2459C6C1C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31DA248-9E28-4756-8035-CD2459C6C1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C31DA248-9E28-4756-8035-CD2459C6C1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31DA248-9E28-4756-8035-CD2459C6C1C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

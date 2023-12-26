@@ -14,6 +14,12 @@ Console.WriteLine("Person ID:");
 Console.WriteLine("Please enter your name:");
 personName = Console.ReadLine();
 
+while (personName == null || personName == "" || personName.Length < 3)
+{
+    Console.WriteLine("Invalid input. Please enter a valid name:");
+    personName = Console.ReadLine();
+}
+
 Console.WriteLine("Please enter your age:");
 while (!int.TryParse(Console.ReadLine(), out personAge))
 {
