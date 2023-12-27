@@ -17,7 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullVariables", "NullVariab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TP", "TP\TP.csproj", "{7EAE58E2-0CC3-4154-93A8-543A1AB61025}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeVariables", "DateTimeVariables\DateTimeVariables.csproj", "{C31DA248-9E28-4756-8035-CD2459C6C1C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeVariables", "DateTimeVariables\DateTimeVariables.csproj", "{C31DA248-9E28-4756-8035-CD2459C6C1C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateOnlyVariables", "DateOnlyVariables\DateOnlyVariables.csproj", "{07254B6C-92AA-499D-86C4-08F713030A81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeOnlyVariables", "TimeOnlyVariables\TimeOnlyVariables.csproj", "{13FA9D67-9391-49B5-93C0-9567EEA77F83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{C31DA248-9E28-4756-8035-CD2459C6C1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C31DA248-9E28-4756-8035-CD2459C6C1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C31DA248-9E28-4756-8035-CD2459C6C1C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07254B6C-92AA-499D-86C4-08F713030A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07254B6C-92AA-499D-86C4-08F713030A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07254B6C-92AA-499D-86C4-08F713030A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07254B6C-92AA-499D-86C4-08F713030A81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13FA9D67-9391-49B5-93C0-9567EEA77F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FA9D67-9391-49B5-93C0-9567EEA77F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FA9D67-9391-49B5-93C0-9567EEA77F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FA9D67-9391-49B5-93C0-9567EEA77F83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
