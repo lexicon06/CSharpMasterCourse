@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TimeOnlyVariables")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6157c02968256e3e95306fef695ab7f2930da520")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TimeOnlyVariables")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TimeOnlyVariables")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
