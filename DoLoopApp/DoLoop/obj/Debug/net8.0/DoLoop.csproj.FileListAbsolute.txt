@@ -1,0 +1,15 @@
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\bin\Debug\net8.0\DoLoop.exe
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\bin\Debug\net8.0\DoLoop.deps.json
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\bin\Debug\net8.0\DoLoop.runtimeconfig.json
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\bin\Debug\net8.0\DoLoop.dll
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\bin\Debug\net8.0\DoLoop.pdb
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\obj\Debug\net8.0\DoLoop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\obj\Debug\net8.0\DoLoop.AssemblyInfoInputs.cache
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\obj\Debug\net8.0\DoLoop.AssemblyInfo.cs
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\obj\Debug\net8.0\DoLoop.csproj.CoreCompileInputs.cache
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\obj\Debug\net8.0\DoLoop.sourcelink.json
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\obj\Debug\net8.0\DoLoop.dll
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\obj\Debug\net8.0\refint\DoLoop.dll
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\obj\Debug\net8.0\DoLoop.pdb
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\obj\Debug\net8.0\DoLoop.genruntimeconfig.cache
+C:\Users\Foxhound\source\repos\DoLoopApp\DoLoop\obj\Debug\net8.0\ref\DoLoop.dll
