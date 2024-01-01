@@ -1,10 +1,15 @@
 ﻿
 
+using System.Globalization;
+
 float version = 1.0f;
 
 bool isProfessor = false;
 
-Console.WriteLine($"Console HOMEWORK application v{version.ToString("N1").Replace(",", ".")} for the course");
+string versionString = version.ToString("N1", CultureInfo.InvariantCulture);
+
+
+Console.WriteLine($"Console HOMEWORK application v{versionString} for the course");
 
 Console.WriteLine("Please enter your name:");
 
