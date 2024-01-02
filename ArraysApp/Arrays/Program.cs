@@ -86,3 +86,7 @@ Console.WriteLine($"user is {(isUserMarried[1] ? "Married":"Not Married")}");
 
 
 Console.WriteLine($"Array 1 {arrays[0].GetValue(1)}");
+
+userAges[1] = 55;
+
+Console.WriteLine($"Array 1 {arrays[0].GetValue(1)}");
