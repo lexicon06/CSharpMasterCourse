@@ -13,7 +13,7 @@ do
 usersList = names.Split(",").ToList();
 
 
-foreach(string user in usersList)
+foreach (string user in usersList)
 {
     Console.WriteLine($"Welcome {user}");
 }
