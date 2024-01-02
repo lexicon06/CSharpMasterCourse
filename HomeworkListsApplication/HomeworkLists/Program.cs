@@ -16,7 +16,7 @@ do
     {
         students.Add(typed);
         Console.WriteLine("====================");
-        Console.WriteLine("Students List:");
+        Console.WriteLine($"Students List: ({students.Count})");
         foreach (string s in students)
         {
             Console.WriteLine($"Name: {s}");
