@@ -54,10 +54,14 @@ namespace HomeWorkMiniProject
             Console.WriteLine("#####GUEST LIST#######");
             Console.WriteLine("######################\n");
 
+            int membersCount = peopleInvited.Values.Sum();
+
             foreach (var person in peopleInvited.Keys)
             {
                 Console.WriteLine($"Family: {person} - Members: {peopleInvited[person]}");
             }
+
+            Console.WriteLine($"Total guest: {peopleInvited.Values.Sum()}");
 
         }
         //public static int totalGuest = 0;
