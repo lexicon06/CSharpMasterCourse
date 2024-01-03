@@ -32,5 +32,18 @@ namespace Methods
         {
             Console.WriteLine($"Goodbye {name}");
         }
+
+        //tuple
+
+       // public static (string, string) GetFullName()
+
+        public static (string firstName, string lastName) GetFullName()
+        {
+            Console.WriteLine("What is your firstname?");
+            string name = Console.ReadLine();
+            Console.WriteLine("What is your lastname?");
+            string lastname = Console.ReadLine();
+            return (name, lastname);
+        }
     }
 }

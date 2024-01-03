@@ -25,5 +25,14 @@ namespace Methods
 
             Console.WriteLine($"The result of adding all is {result}");
         }
+
+        public static string GetUsersName()
+        {
+
+            Console.WriteLine("Please enter your name:");
+            string name = Console.ReadLine();
+
+            return name;
+        }
     }
 }
