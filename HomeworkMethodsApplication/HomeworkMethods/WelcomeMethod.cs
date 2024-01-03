@@ -10,9 +10,15 @@ namespace HomeworkMethods
     {
         public static string userWelcome()
         {
-            Console.WriteLine("Hello, please enter your name");
+            string userName = String.Empty;
 
-            string userName = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("Hello, please enter your name");
+
+                userName = Console.ReadLine();
+            }
+            while (userName == String.Empty);
 
             return userName;
         }
