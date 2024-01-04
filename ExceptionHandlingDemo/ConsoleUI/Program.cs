@@ -10,6 +10,22 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+
+            try
+            {
+                BadCall();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Sorry error has ocurred "+ex.Message);
+                throw;
+            }
+            Console.WriteLine("hello from netcore app");
+            Console.ReadLine();
+        }
+
+        private static void BadCall()
+        {
             int[] ages = new int[] { 1, 4, 5 };
             for (int i = 0; i <= ages.Length; i++)
             {
@@ -19,11 +35,12 @@ namespace ConsoleUI
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Sorry we had an error " + ex.Message);
+                   // Console.WriteLine("Sorry we had an error " + ex.Message);
+
+                    throw new Exception("There was an error handling the array", ex);
+
                 }
             }
-            Console.WriteLine("hello from netcore app");
-            Console.ReadLine();
         }
     }
 }
