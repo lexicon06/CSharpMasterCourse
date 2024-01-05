@@ -13,10 +13,16 @@ namespace ConsoleUI
 
             string userName = UserMessages.GetUserName("What is your name?: ");
             UserMessages.Welcome(userName);
-            Console.Write("Please enter your number: ");
-            double exitDouble = RequestData.GetDoubles(Console.ReadLine());
 
-            Console.WriteLine($"Got it: {exitDouble}");
+            Console.Write("Please enter your number: ");
+            double firstDouble = RequestData.GetDoubles(Console.ReadLine());
+
+            Console.Write("Please enter another number: ");
+            double secondDouble = RequestData.GetDoubles(Console.ReadLine());
+
+            double totalDouble = CalculateData.Calc(firstDouble, secondDouble);
+
+            Console.WriteLine($"The sum of: {firstDouble} & {secondDouble} is equal to {totalDouble}");
             Console.ReadLine();
         }
 
