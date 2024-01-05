@@ -8,9 +8,11 @@ namespace ConsoleUI
 {
     internal class Program
     {
-        static void Main(string[] argumments)
+        static void Main(string[] args)
         {
-            Console.WriteLine(argumments);
+            int i = W(0);
+            Console.WriteLine(i);
+            Console.ReadLine();
         }
 
         private static int W(int e)
