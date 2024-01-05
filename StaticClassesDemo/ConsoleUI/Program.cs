@@ -11,24 +11,70 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
 
+            string[] operationNames = new string[] { "Sum@+", "Subtraction@-", "Multiply@*", "Division@/" };
+
             string userName = UserMessages.GetUserName("What is your name?: ");
             UserMessages.Welcome(userName);
 
-            Console.Write("Please enter your number: ");
-            double firstDouble = RequestData.GetDoubles(Console.ReadLine());
+
+
+            int option = 0;
+
+            double doubleOne, doubleTwo, total;
+
+            do
+            {
+                Console.WriteLine("\n##############################\n");
+                Console.WriteLine("Please select math operation:\n");
+                Console.WriteLine("1: Add");
+                Console.WriteLine("2: Subtract");
+                Console.WriteLine("3: Multiply");
+                Console.WriteLine("4: Divide");
+                Console.WriteLine("\n##############################\n");
+
+            } while (!int.TryParse(Console.ReadLine(), out option));
+
+
+
+            string mathOperation = operationNames[option - 1].Split('@')[0];
+            string mathSign = operationNames[option - 1].Split('@')[1];
+
+
+            Console.WriteLine(mathOperation.ToUpper());
+
+            Console.Write("Enter a Number: ");
+
+            doubleOne = RequestData.GetDoubles(Console.ReadLine());
 
             Console.Write("Please enter another number: ");
-            double secondDouble = RequestData.GetDoubles(Console.ReadLine());
 
-            double totalDouble = CalculateData.Calc(firstDouble, secondDouble);
+            doubleTwo = RequestData.GetDoubles(Console.ReadLine());
 
-            Console.WriteLine($"The sum of: {firstDouble} & {secondDouble} is equal to {totalDouble}");
+
+            total = calcMethodMath(option, doubleOne, doubleTwo);
+
+
+            Console.WriteLine($"The {mathOperation} of: {doubleOne} {mathSign} {doubleTwo} = {total}");
+
             Console.ReadLine();
+
         }
 
-        private static void IntroMessage(string message)
+        //private static void IntroMessage(string message)
+        //{
+        //    Console.WriteLine(message);
+        //}
+
+        internal static double calcMethodMath(int option, double doubleOne, double doubleTwo)
         {
-            Console.WriteLine(message);
+            if (option == 1)
+                return CalculateData.Addition(doubleOne, doubleTwo);
+            else if (option == 2)
+                return CalculateData.Subtract(doubleOne, doubleTwo);
+            else if (option == 3)
+                return CalculateData.Multiply(doubleOne, doubleTwo);
+
+            return CalculateData.Division(doubleOne, doubleTwo);
         }
     }
 }
