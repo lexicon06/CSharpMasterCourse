@@ -13,6 +13,10 @@ namespace ConsoleUI
 
             string userName = UserMessages.GetUserName("What is your name?: ");
             UserMessages.Welcome(userName);
+            Console.Write("Please enter your number: ");
+            double exitDouble = RequestData.GetDoubles(Console.ReadLine());
+
+            Console.WriteLine($"Got it: {exitDouble}");
             Console.ReadLine();
         }
 
