@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleUI
 {
     internal class Program
-    {
+    {//use ctrl +h for replacements
         static void Main(string[] args)
         {
             int i = W(0);
