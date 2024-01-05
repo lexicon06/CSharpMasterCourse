@@ -10,9 +10,8 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            IntroMessage("#####ClassAPP####");
-            Console.Write("What is your name: ");
-            string userName = Console.ReadLine();
+
+            string userName = UserMessages.GetUserName("What is your name?: ");
             UserMessages.Welcome(userName);
             Console.ReadLine();
         }

@@ -42,5 +42,22 @@ namespace ConsoleUI
         {
             Console.WriteLine($"Good afternoon {userName}");
         }
+
+        public static string GetUserName(string msgWelcome)
+        {
+
+            Console.Write(msgWelcome);
+
+            string name = Console.ReadLine();
+
+            while (name == "")
+            {
+
+                Console.Write("Please enter a valid name: ");
+                name = Console.ReadLine();
+            }
+
+            return name;
+        }
     }
 }
