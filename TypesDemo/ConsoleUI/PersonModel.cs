@@ -67,6 +67,11 @@ namespace ConsoleUI
         }
 
 
+        public PersonModel(string lastName)
+        {
+            LastName = lastName;
+        }
+
 
     }
 }

@@ -26,7 +26,7 @@ namespace ConsoleUI
 
             try
             {
-                PersonModel person = new PersonModel { FirstName = name, Age = age, SSN = SocialNumber };
+                PersonModel person = new PersonModel("Santillan") { FirstName = name, Age = age, SSN = SocialNumber };
 
                 Console.WriteLine($"Name: {person.FullName}, Age: {person.Age}, SSN {person.SSN}");
 
