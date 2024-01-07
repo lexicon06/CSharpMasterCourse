@@ -19,7 +19,7 @@ namespace ConsoleUI
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
 
-
+        public bool HasBeenGreeted { get; set; }
 
     }
 }

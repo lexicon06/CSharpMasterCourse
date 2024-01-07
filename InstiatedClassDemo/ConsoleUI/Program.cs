@@ -92,15 +92,18 @@ namespace ConsoleUI
                         FirstName = userName,
                         LastName = lastName,
                     });
+
+                    //if(userName.ToLower() != "fox") ProcessPerson.GreetPerson(list[list.Count - 1]);
                 }
             } while (userName != "exit");
 
 
             Console.WriteLine($"\nList of people ({list.Count}):\n");
 
-            foreach (PersonModel model in list)
+            foreach (PersonModel p in list)
             {
-                Console.WriteLine(model.FirstName + " " + model.LastName);
+                //Console.WriteLine(p.FirstName + " " + p.LastName+" greeted? "+p.HasBeenGreeted);
+                ProcessPerson.GreetPerson(p);
             }
 
 
