@@ -28,7 +28,7 @@ namespace ConsoleUI
             {
                 PersonModel person = new PersonModel { FirstName = name, Age = age, SSN = SocialNumber };
 
-                Console.WriteLine($"Name: {person.FirstName}, Age: {person.Age}, SSN {person.SSN}");
+                Console.WriteLine($"Name: {person.FullName}, Age: {person.Age}, SSN {person.SSN}");
 
             }
             catch (Exception ex)

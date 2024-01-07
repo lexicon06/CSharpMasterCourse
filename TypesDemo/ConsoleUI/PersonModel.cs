@@ -8,8 +8,8 @@ namespace ConsoleUI
 {
     public class PersonModel
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FirstName { private get; set; }
+        public string LastName { get; private set; }
         //public int Age { get; set; }
         //we use propfull below
 
@@ -38,6 +38,14 @@ namespace ConsoleUI
 
         private string _ssn;
 
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
+
         public string SSN
         {
             get
@@ -45,8 +53,9 @@ namespace ConsoleUI
 
                 //string output = "***-**-" + _ssn.Substring(_ssn.Length - 5);
                 string output = string.Empty;
-                if (_ssn.Split('-').Length > 1) { 
-                output = "***-**-"+_ssn.Split('-')[2];
+                if (_ssn.Split('-').Length > 1)
+                {
+                    output = "***-**-" + _ssn.Split('-')[2];
                 }
                 else
                 {
