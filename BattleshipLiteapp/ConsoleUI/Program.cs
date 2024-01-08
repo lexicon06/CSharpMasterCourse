@@ -14,11 +14,13 @@ namespace ConsoleUI
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             string[] gamePieces = new string[] { "🚢", "💣", "🔷" };
-            
-            foreach(string piece in gamePieces)
+
+
+            foreach (string piece in gamePieces)
             {
                 Console.WriteLine(piece);
             }
+
 
             Console.ReadLine();
         }
