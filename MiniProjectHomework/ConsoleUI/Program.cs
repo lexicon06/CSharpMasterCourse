@@ -17,10 +17,10 @@ namespace ConsoleUI
             string userInput = "";
             do
             {
-                Console.WriteLine("Please enter a guest name or type 'close/exit' to quit");
+                Console.WriteLine("Please enter a guest family or type 'close' to quit");
                 userInput = Console.ReadLine();
 
-                if (userInput.ToLower() != "close" || userInput.ToLower() != "quit")
+                if (userInput.ToLower() != "close")
                 {
                     string firstName = userInput;
                     Console.WriteLine("Please enter last name");
@@ -34,9 +34,17 @@ namespace ConsoleUI
 
                 }
 
-            } while (userInput.ToLower() != "close" || userInput.ToLower() != "quit");
+            } while (userInput.ToLower() != "close");
 
-            Console.WriteLine("Guest List:");
+            if (guests.Count != 0)
+            {
+
+                Console.WriteLine("Guest List:");
+            }
+            else
+            {
+                Console.WriteLine("Empty list");
+            }
 
             foreach (GuestModel gue in guests)
             {
