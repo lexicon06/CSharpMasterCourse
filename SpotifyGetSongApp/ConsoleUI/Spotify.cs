@@ -15,9 +15,7 @@ namespace ConsoleUI
                 {
                     if (!p.MainWindowTitle.Equals("") && p.MainWindowTitle.Contains("-"))
                     {
-                        // string fullSong = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(p.MainWindowTitle);
-                        string fullSong = p.MainWindowTitle;
-                        return fullSong;
+                        return p.MainWindowTitle;
                     }
                 }
 
