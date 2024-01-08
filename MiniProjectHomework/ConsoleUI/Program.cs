@@ -10,10 +10,39 @@ namespace ConsoleUI
 {
     public class Program
     {
+        //List<GuestModel> guests = new List<GuestModel>(); this will live as long the app is on
         static void Main(string[] args)
         {
 
             List<GuestModel> guests = new List<GuestModel>();
+
+            GetUserInfo(guests);
+
+            DisplayGuestList(guests);
+
+            Console.ReadLine();
+        }
+
+        public static void DisplayGuestList(List<GuestModel> guests)
+        {
+            if (guests.Count != 0)
+            {
+
+                Console.WriteLine("Guest List:");
+            }
+            else
+            {
+                Console.WriteLine("Empty list");
+            }
+
+            foreach (GuestModel gue in guests)
+            {
+                Console.WriteLine($"{gue.FirstName} {gue.LastName}, {gue.MessageToHost}");
+            }
+        }
+
+        public static void GetUserInfo(List<GuestModel> guests)
+        {
             string userInput = "";
             do
             {
@@ -35,23 +64,6 @@ namespace ConsoleUI
                 }
 
             } while (userInput.ToLower() != "close");
-
-            if (guests.Count != 0)
-            {
-
-                Console.WriteLine("Guest List:");
-            }
-            else
-            {
-                Console.WriteLine("Empty list");
-            }
-
-            foreach (GuestModel gue in guests)
-            {
-                Console.WriteLine($"{gue.FirstName} {gue.LastName}, {gue.MessageToHost}");
-            }
-
-            Console.ReadLine();
         }
     }
 }
