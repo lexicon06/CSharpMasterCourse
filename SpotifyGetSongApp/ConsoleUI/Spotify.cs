@@ -11,11 +11,14 @@ namespace ConsoleUI
             {
                 Process[] ps = Process.GetProcessesByName("Spotify");
 
-                foreach (Process p in ps)
+                if (ps.Length > 0)
                 {
-                    if (!p.MainWindowTitle.Equals("") && p.MainWindowTitle.Contains("-"))
+                    foreach (Process p in ps)
                     {
-                        return p.MainWindowTitle;
+                        if (!string.IsNullOrEmpty(p.MainWindowTitle) && p.MainWindowTitle.Contains("-"))
+                        {
+                            return p.MainWindowTitle;
+                        }
                     }
                 }
 
