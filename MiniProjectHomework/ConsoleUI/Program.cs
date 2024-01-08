@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace ConsoleUI
 {
@@ -46,16 +48,14 @@ namespace ConsoleUI
             string userInput = "";
             do
             {
-                Console.WriteLine("Please enter a guest family or type 'close' to quit");
-                userInput = Console.ReadLine();
+
+                userInput = GetUserInput("Please enter a guest family or type 'close' to quit");
 
                 if (userInput.ToLower() != "close")
                 {
                     string firstName = userInput;
-                    Console.WriteLine("Please enter last name");
-                    string lastName = Console.ReadLine();
-                    Console.WriteLine("Enter message to host");
-                    string msgToHost = Console.ReadLine();
+                    string lastName = GetUserInput("Please enter last name");
+                    string msgToHost = GetUserInput("Enter message to host");
 
                     guests.Add(new GuestModel { FirstName = firstName, LastName = lastName, MessageToHost = msgToHost });
 
@@ -64,6 +64,14 @@ namespace ConsoleUI
                 }
 
             } while (userInput.ToLower() != "close");
+        }
+
+        private static string GetUserInput(string Message)
+        {
+            string output = "";
+            Console.WriteLine(Message);
+            output = Console.ReadLine();
+            return output;
         }
     }
 }
