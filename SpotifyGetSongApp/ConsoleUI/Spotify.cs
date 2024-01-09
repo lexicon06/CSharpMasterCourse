@@ -15,9 +15,11 @@ namespace ConsoleUI
                 {
                     foreach (Process p in ps)
                     {
-                        if (!string.IsNullOrEmpty(p.MainWindowTitle) && p.MainWindowTitle.Contains("-"))
-                        {
-                            return p.MainWindowTitle;
+                        string song = p.MainWindowTitle;
+
+                        if (!string.IsNullOrEmpty(song) && song.Contains("-") && !song.Contains("SPOTIFY"))
+                        {//added SPOTIFY just in case of adverts, could be
+                            return song;
                         }
                     }
                 }
