@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleshipLiteLibrary", "BattleshipLiteLibrary\BattleshipLiteLibrary.csproj", "{F27AC7B9-2751-49F5-9819-2E87C10F50D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{79213BA1-3D4F-4F6C-B3E8-A38A22C750D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F27AC7B9-2751-49F5-9819-2E87C10F50D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F27AC7B9-2751-49F5-9819-2E87C10F50D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F27AC7B9-2751-49F5-9819-2E87C10F50D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79213BA1-3D4F-4F6C-B3E8-A38A22C750D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79213BA1-3D4F-4F6C-B3E8-A38A22C750D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79213BA1-3D4F-4F6C-B3E8-A38A22C750D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79213BA1-3D4F-4F6C-B3E8-A38A22C750D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
