@@ -31,7 +31,7 @@ namespace ConsoleUI
             {
                 throw new ArgumentException("Invalid input, make sure you enter a valid position such as b2");
             }
-            else if (!int.TryParse(output.Substring(1), out int gridPosX) || !char.TryParse(output.Substring(0, 1), out char gridPosY))
+            else if (!int.TryParse(output.Substring(1), out _) || !char.TryParse(output.Substring(0, 1), out _))
             {
                 throw new ArgumentException("Invalid position, make sure your pos is correct");
             }
