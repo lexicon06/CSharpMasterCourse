@@ -10,14 +10,23 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            try
+            bool PlayIt = WannaPlay();
+
+            if (PlayIt)
             {
-                string Spot = SpotInput("Please enter your spot");
-                Console.WriteLine($"You just have entered {Spot}");
+                try
+                {
+                    string Spot = SpotInput("Please enter your spot");
+                    Console.WriteLine($"You just have entered {Spot}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Goodbye.");
             }
             Console.ReadLine();
         }
@@ -31,7 +40,9 @@ namespace ConsoleUI
             {
                 throw new ArgumentException("Invalid input, make sure you enter a valid position such as b2");
             }
-            else if (!int.TryParse(output.Substring(1), out _) || !char.TryParse(output.Substring(0, 1), out _))
+            else if (!int.TryParse(output.Substring(1), out int _) || 
+                !char.TryParse(output.Substring(0, 1), out _) ||
+                int.TryParse(output.Substring(0,1), out _))
             {
                 throw new ArgumentException("Invalid position, make sure your pos is correct");
             }
@@ -42,6 +53,12 @@ namespace ConsoleUI
         public static void DisplayGrid()
         {
             //grid here
+        }
+
+        public static bool WannaPlay()
+        {
+            Console.WriteLine("Welcome to BattleShip game wanna play? yes/no");
+            return Console.ReadLine().ToLower() == "yes";
         }
     }
 }
