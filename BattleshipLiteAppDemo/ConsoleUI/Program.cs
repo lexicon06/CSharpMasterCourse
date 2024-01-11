@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             WelcomePlayers();
+            bool KeepRunning = true;
 
             do
             {
@@ -23,7 +25,18 @@ namespace ConsoleUI
                 {
                     Console.WriteLine(ex.Message);
                 }
-            } while (WannaPlay());
+
+                try
+                {
+                    KeepRunning = WannaPlay();
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+            } while (KeepRunning);
             Console.ReadLine();
         }
 
@@ -56,8 +69,17 @@ namespace ConsoleUI
 
         private static bool WannaPlay()
         {
+            string userInput = Console.ReadLine();
             Console.WriteLine("Wanna play? yes/no");
-            return Console.ReadLine().ToLower() == "yes";
+            if (userInput.ToLower() == "yes" || userInput.ToLower() == "no")
+            {
+
+                return userInput.ToLower() == "yes";
+            }
+            else
+            {
+                throw new InvalidDataException("Bad input the value must be only yes or no");
+            }
         }
     }
 }
