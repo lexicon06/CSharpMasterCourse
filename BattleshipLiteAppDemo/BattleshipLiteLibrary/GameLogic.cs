@@ -34,10 +34,37 @@ namespace BattleshipLiteLibrary
             {
                 foreach (int number in numbers)
                 {
-
+                    AddGridSpot(model, letter, number);
                 }
             }
 
+        }
+
+        private static void AddGridSpot(PlayerInfoModel model, string letter, int number)
+        {
+            GridSpotModel spot = new GridSpotModel
+            {
+                SpotLetter = letter,
+                SpotNumber = number,
+                Status = GridSpotStatus.Empty
+            };
+
+            model.ShotGrid.Add(spot);
+
+        }
+
+        public static bool StoreShip(PlayerInfoModel model, string location)
+        {
+            //if (location.Length != 2)
+            //{
+            //    throw new ArgumentException("Invalid input, make sure you enter a valid position such as b2");
+            //}
+            //else if (!char.IsLetter(location[0]) || !char.IsDigit(location[1]))
+            //{
+            //    throw new ArgumentException("Invalid position, make sure your pos is correct");
+            //}
+
+            throw new NotImplementedException();
         }
     }
 }

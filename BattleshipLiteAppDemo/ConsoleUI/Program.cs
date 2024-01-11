@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BattleshipLiteLibrary;
 using BattleshipLiteLibrary.Models;
 
 namespace ConsoleUI
@@ -13,6 +14,10 @@ namespace ConsoleUI
         static void Main()
         {
             WelcomeMessage();
+
+            PlayerInfoModel Player1 = CreatePlayer("Player 1");
+            PlayerInfoModel Player2 = CreatePlayer("Player 2");
+
             Console.ReadLine();
         }
 
@@ -23,12 +28,22 @@ namespace ConsoleUI
             Console.WriteLine("");
         }
 
-        private static PlayerInfoModel CreatePlayer()
+        private static PlayerInfoModel CreatePlayer(string playerTitle)
         {
             PlayerInfoModel output = new PlayerInfoModel();
 
+            Console.WriteLine($"Player information for {playerTitle}");
+
+            //Ask user for their name
             output.UsersName = AskForUsersName();
-            output.ShotGrid = 
+            //Load up the shot grid
+            GameLogic.InitializeGrid(output);
+
+            //Ask the user for their 5 placements
+            PlaceShips(output);
+
+            //Clear
+            Console.Clear();
 
             return output;
 
@@ -38,6 +53,23 @@ namespace ConsoleUI
         {
             Console.Write("Please enter your name: ");
             return Console.ReadLine();
+        }
+
+
+        private static void PlaceShips(PlayerInfoModel model)
+        {
+            do
+            {
+                Console.Write($"Where do you want to place ship number {model.ShipLocations.Count + 1}: ");
+                string location = Console.ReadLine();
+                bool isValidLocation = GameLogic.StoreShip(model, location);
+
+                if (!isValidLocation)
+                {
+                    Console.WriteLine("That is not a valid location. Please try again.");
+                }
+
+            } while (model.ShipLocations.Count < 5);
         }
 
         //static void Main(string[] args)
