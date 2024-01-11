@@ -8,6 +8,7 @@ namespace BattleshipLiteLibrary.Models
 {
     public class PlayerInfoModel
     {
-
+        public string UsersName { get; set; }
+        public int ShotGrid { get; set; }
     }
 }
