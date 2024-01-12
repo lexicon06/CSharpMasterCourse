@@ -17,6 +17,18 @@ namespace ConsoleUI
 
             PlayerInfoModel Player1 = CreatePlayer("Player 1");
             PlayerInfoModel Player2 = CreatePlayer("Player 2");
+            PlayerInfoModel winner = null;
+
+            do
+            {
+                // Display grid from player 1 on where they fired
+                // Ask player 1 for a shot
+                // Determine if it is a valid shot
+                // Determine shot results
+                // Determine if the game is over
+                // If over, set player1 as the winner 
+                // else go to player 2
+            } while (winner == null);
 
             Console.ReadLine();
         }
