@@ -55,14 +55,14 @@ namespace BattleshipLiteLibrary
 
         public static bool StoreShip(PlayerInfoModel model, string location)
         {
-            //if (location.Length != 2)
-            //{
-            //    throw new ArgumentException("Invalid input, make sure you enter a valid position such as b2");
-            //}
-            //else if (!char.IsLetter(location[0]) || !char.IsDigit(location[1]))
-            //{
-            //    throw new ArgumentException("Invalid position, make sure your pos is correct");
-            //}
+            if (location.Length != 2)
+            {
+                throw new ArgumentException("Invalid input, make sure you enter a valid position such as b2");
+            }
+            else if (!char.IsLetter(location[0]) || !char.IsDigit(location[1]))
+            {
+                throw new ArgumentException("Invalid position, make sure your pos is correct");
+            }
 
             throw new NotImplementedException();
         }
