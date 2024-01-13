@@ -15,19 +15,22 @@ namespace ConsoleUI
         {
             WelcomeMessage();
 
-            PlayerInfoModel Player1 = CreatePlayer("Player 1");
-            PlayerInfoModel Player2 = CreatePlayer("Player 2");
+            PlayerInfoModel activePlayer = CreatePlayer("Player 1");
+            PlayerInfoModel opponent = CreatePlayer("Player 2");
             PlayerInfoModel winner = null;
 
             do
             {
+                DisplayShotGrid(activePlayer);
+
                 // Display grid from player 1 on where they fired
                 // Ask player 1 for a shot
                 // Determine if it is a valid shot
+                RecordPlayerShot(activePlayer, opponent);
                 // Determine shot results
                 // Determine if the game is over
                 // If over, set player1 as the winner 
-                // else go to player 2
+                // else swap positions (activePlayer to opponent)
             } while (winner == null);
 
             Console.ReadLine();
@@ -82,6 +85,41 @@ namespace ConsoleUI
                 }
 
             } while (model.ShipLocations.Count < 5);
+        }
+
+        private static void DisplayShotGrid(PlayerInfoModel activePlayer)
+        {
+            string currentRow = activePlayer.ShotGrid[0].SpotLetter;
+
+            foreach (var gridSpot in activePlayer.ShotGrid)
+            {
+                if (gridSpot.SpotLetter != currentRow)
+                {
+                    Console.WriteLine();
+                    currentRow = gridSpot.SpotLetter;
+                }
+                if (gridSpot.Status == GridSpotStatus.Empty)
+                {
+                    Console.WriteLine($" {gridSpot.SpotLetter}{gridSpot.SpotNumber}");
+                }
+                else if (gridSpot.Status == GridSpotStatus.Hit)
+                {
+                    Console.WriteLine(" X ");
+                }
+                else if (gridSpot.Status == GridSpotStatus.Miss)
+                {
+                    Console.WriteLine(" O ");
+                }
+                else
+                {
+                    Console.WriteLine(" ? ");
+                }
+            }
+        }
+
+        private static void RecordPlayerShot(PlayerInfoModel p1, PlayerInfoModel p2)
+        {
+
         }
 
         //static void Main(string[] args)
