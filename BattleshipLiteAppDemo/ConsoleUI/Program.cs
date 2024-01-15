@@ -31,6 +31,7 @@ namespace ConsoleUI
                 // Determine if the game is over
                 // If over, set player1 as the winner 
                 // else swap positions (activePlayer to opponent)
+                if(winner!=null) Console.WriteLine(winner);
             } while (winner == null);
 
             Console.ReadLine();
@@ -119,7 +120,10 @@ namespace ConsoleUI
 
         private static void RecordPlayerShot(PlayerInfoModel p1, PlayerInfoModel p2)
         {
-
+            // Ask for a shot ask for B2 or B and then 2
+            // Determine what row or colum that is - split it apart
+            // Determine if that a valid shot
+            // Go back to the begining if not a valid shot
         }
 
         //static void Main(string[] args)
