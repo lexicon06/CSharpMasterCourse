@@ -141,7 +141,7 @@ namespace ConsoleUI
             {
                 string shot = AskForShot();
                 (row, column) = GameLogic.SplitShotIntoRowAndColumn(shot);
-                isValidShot = GameLogic.ValidateShot(row, column);
+                isValidShot = GameLogic.ValidateShot(activePlayer, row, column);
 
                 if (!isValidShot)
                 {
