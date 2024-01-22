@@ -63,7 +63,6 @@ namespace BattleshipLiteLibrary
             {
                 throw new ArgumentException("Invalid position, make sure your pos is correct");
             }
-
             return true;
         }
 

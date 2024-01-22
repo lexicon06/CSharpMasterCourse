@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDownloaderGif", "ImageDownloaderGif\ImageDownloaderGif.csproj", "{7B66935B-C8D4-4541-8632-98171B23D10F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B66935B-C8D4-4541-8632-98171B23D10F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B66935B-C8D4-4541-8632-98171B23D10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B66935B-C8D4-4541-8632-98171B23D10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B66935B-C8D4-4541-8632-98171B23D10F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A87251FD-4C81-44DD-8D81-232901151004}
+	EndGlobalSection
+EndGlobal

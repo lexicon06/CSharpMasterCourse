@@ -98,6 +98,10 @@ namespace ConsoleUI
                 {
                     Console.WriteLine("That is not a valid location. Please try again.");
                 }
+                else
+                {
+                    model.ShipLocations.Add(new GridSpotModel { SpotLetter = location });
+                }
 
             } while (model.ShipLocations.Count < 5);
         }
@@ -115,19 +119,19 @@ namespace ConsoleUI
                 }
                 if (gridSpot.Status == GridSpotStatus.Empty)
                 {
-                    Console.WriteLine($" {gridSpot.SpotLetter}{gridSpot.SpotNumber}");
+                    Console.Write($" {gridSpot.SpotLetter}{gridSpot.SpotNumber}");
                 }
                 else if (gridSpot.Status == GridSpotStatus.Hit)
                 {
-                    Console.WriteLine(" X ");
+                    Console.Write(" X ");
                 }
                 else if (gridSpot.Status == GridSpotStatus.Miss)
                 {
-                    Console.WriteLine(" O ");
+                    Console.Write(" O ");
                 }
                 else
                 {
-                    Console.WriteLine(" ? ");
+                    Console.Write(" ? ");
                 }
             }
         }
