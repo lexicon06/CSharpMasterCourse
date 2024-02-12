@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassesPractice
+{
+    public class InstantiatedDemo
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Description { get; set; }
+
+        public InstantiatedDemo(string name)
+        {
+            Name = name;
+            Console.WriteLine($"Hello {Name}");
+        }
+    }
+}

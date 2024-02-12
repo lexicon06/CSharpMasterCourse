@@ -183,21 +183,21 @@ namespace BattleshipLiteLibrary
             return isValidShot;
         }
 
-        public static bool IdentifyShotResult(PlayerInfoModel player, string row, int column)
+        public static bool IdentifyShotResult(PlayerInfoModel opponent, string row, int column)
         {
-            bool isValidShot = true;
-            foreach (var gridSpot in player.ShotGrid)
+            bool isAHit = false;
+            foreach (var ship in opponent.ShotGrid)
             {
-                if (gridSpot.SpotLetter == row.ToUpper() && gridSpot.SpotNumber == column)
+                if (ship.SpotLetter == row.ToUpper() && ship.SpotNumber == column)
                 {
-                    if (gridSpot.Status == GridSpotStatus.Empty)
-                    {
-                        isValidShot = false;
-                    }
+                    
+                    isAHit = true;
+                    ship.Status = GridSpotStatus.Sunk;
+                    
                 }
             }
 
-            return isValidShot;
+            return isAHit;
         }
 
         public static void MarkShotResult(PlayerInfoModel player, string row, int column, bool isAHit)
