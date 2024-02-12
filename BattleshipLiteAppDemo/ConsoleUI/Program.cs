@@ -92,7 +92,15 @@ namespace ConsoleUI
             {
                 Console.Write($"Where do you want to place ship number {model.ShipLocations.Count + 1}: ");
                 string location = Console.ReadLine();
-                bool isValidLocation = GameLogic.StoreShip(model, location);
+                bool isValidLocation = false;
+                try
+                {
+                    isValidLocation = GameLogic.StoreShip(model, location);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
 
                 if (!isValidLocation)
                 {
@@ -134,6 +142,9 @@ namespace ConsoleUI
                     Console.Write(" ? ");
                 }
             }
+
+            Console.WriteLine();
+            Console.WriteLine();
         }
 
         private static void RecordPlayerShot(PlayerInfoModel activePlayer, PlayerInfoModel opponent)
@@ -143,9 +154,17 @@ namespace ConsoleUI
             int column = 0;
             do
             {
-                string shot = AskForShot();
-                (row, column) = GameLogic.SplitShotIntoRowAndColumn(shot);
-                isValidShot = GameLogic.ValidateShot(activePlayer, row, column);
+                string shot = AskForShot(activePlayer);
+                try
+                {
+                    (row, column) = GameLogic.SplitShotIntoRowAndColumn(shot);
+                    isValidShot = GameLogic.ValidateShot(activePlayer, row, column);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    isValidShot = false;
+                }
 
                 if (!isValidShot)
                 {
@@ -159,11 +178,26 @@ namespace ConsoleUI
 
             GameLogic.MarkShotResult(activePlayer, row, column, isAHit);
 
+            DisplayShotResults(row, column, isAHit);
+
         }
 
-        private static string AskForShot()
+        private static void DisplayShotResults(string row, int column, bool isAHit)
         {
-            Console.WriteLine($"Please enter your shot selection");
+            if (isAHit) {
+                Console.WriteLine($"{row}{column} is a Hit!");
+}
+            else
+            {
+                Console.WriteLine($"{row}{column} is a miss.");
+            }
+
+            Console.WriteLine();
+        }
+
+        private static string AskForShot(PlayerInfoModel activePlayer)
+        {
+            Console.WriteLine($"{activePlayer.UsersName}, please enter your shot selection");
             string output = Console.ReadLine();
             return output;
         }
