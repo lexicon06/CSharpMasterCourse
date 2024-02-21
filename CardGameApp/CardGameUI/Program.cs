@@ -10,16 +10,18 @@ namespace CardGameUI
     {
         static void Main(string[] args)
         {
+            PockerDeck deck = new PockerDeck();
+
             Console.ReadLine();
         }
     }
 
     public abstract class Deck
     {
-        private List<PlayingCard> fullDeck = new List<PlayingCard>();
-        private List<PlayingCard> drawPile = new List<PlayingCard>();
-        private List<PlayingCard> discardPile = new List<PlayingCard>();
-        public void CreateDeck()
+        protected List<PlayingCardModel> fullDeck = new List<PlayingCardModel>();
+        protected List<PlayingCardModel> drawPile = new List<PlayingCardModel>();
+        protected List<PlayingCardModel> discardPile = new List<PlayingCardModel>();
+        protected void CreateDeck()
         {
             fullDeck.Clear();
 
@@ -27,7 +29,7 @@ namespace CardGameUI
             {
                 for(int val = 0; val < 13; val++)
                 {
-                    fullDeck.Add(new PlayingCard { Suit = (CardSuit)suit, Value = (CardValue)val });
+                    fullDeck.Add(new PlayingCardModel { Suit = (CardSuit)suit, Value = (CardValue)val });
                 }
             }
         }
@@ -40,44 +42,69 @@ namespace CardGameUI
 
         }
 
-        public abstract List<PlayingCard> DealCard();
+        public abstract List<PlayingCardModel> DealCards();
 
-        public virtual PlayingCard RequestCard()
+        protected virtual PlayingCardModel DrawOneCard()
         {
-            return null;
+            PlayingCardModel output = drawPile.Take(1).First();
+            drawPile.Remove(output);
+            return output;
         }
 
     }
 
-
-    public class PlayingCard
+    public class BlackjackDeck : Deck
     {
-        public CardSuit Suit { get; set; }
-        public CardValue Value { get; set; }
+        public BlackjackDeck()
+        {
+            CreateDeck();
+            SuffleDeck();
+        }
+        public override List<PlayingCardModel> DealCards()
+        {
+            List<PlayingCardModel> output = new List<PlayingCardModel>();
+
+            for (var i = 0; i<2; i++)
+            {
+                output.Add(DrawOneCard());
+                discardPile.Add(DrawOneCard());
+            }
+
+            return output;
+        }
     }
 
-    public enum CardValue
-    {
-        Ace,
-        Two,
-        Three,
-        Four,
-        Five,
-        Six,
-        Seven,
-        Eight,
-        Nine,
-        Ten,
-        Jack,
-        Queen,
-        King
-    }
 
-    public enum CardSuit
+    public class PockerDeck : Deck
     {
-        Hearts,
-        Clubs,
-        Diamonds,
-        Spades
+        public PockerDeck()
+        {
+            CreateDeck();
+            SuffleDeck();
+        }
+        public override List<PlayingCardModel> DealCards()
+        {
+            List<PlayingCardModel> output = new List<PlayingCardModel> ();
+            for(int i = 0; i < 5; i++)
+            {
+                output.Add(DrawOneCard());
+            }
+
+            return output;
+
+        }
+
+        public List<PlayingCardModel> DrawOneCard(List<PlayingCardModel> cardsToDiscard)
+        {
+            List<PlayingCardModel> output = new List<PlayingCardModel>();
+
+            foreach (var card in cardsToDiscard)
+            {
+                output.Add(card);
+                discardPile.Add(card);
+            }
+
+            return output;
+        }
     }
 }

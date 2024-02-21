@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83CE1C0C-7A64-4440-B351-C7881AD7D309}</ProjectGuid>
+    <ProjectGuid>{F0D42578-813B-479D-BE69-5D70E07F7947}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CardGameUI</RootNamespace>
-    <AssemblyName>CardGameUI</AssemblyName>
+    <RootNamespace>MiniPracticeProyectHangman</RootNamespace>
+    <AssemblyName>MiniPracticeProyectHangman</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums\CardSuit.cs" />
-    <Compile Include="Enums\CardValue.cs" />
-    <Compile Include="Models\PlayingCardModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
