@@ -13,7 +13,7 @@ namespace ExtensionMethodsOwn
 
         public static ATMBankModel AccBalanceTicket(this ATMBankModel p)
         {
-            Console.WriteLine($"Current balance is {p.Balance}");
+            Console.WriteLine($"Current balance is {p.Balance:C}");
             Console.ReadLine();
             return p;
         }
